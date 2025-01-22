@@ -9,7 +9,7 @@
 {"instruction": "How many books in the Old Testament?","context": "","response": "39 books in the OT"}
 {"instruction": "How many books in the New Testament?","context": "","response": "27 books in the NT"}
 {"instruction": "Which NT book has Jesus' Sermon on the Mount?","context": "","response": "Matthew"}
-{"instruction": "Ture or False: The Bible was first written in the English language?","context": "","response": "False"}
+{"instruction": "True or False: The Bible was first written in the English language?","context": "","response": "False"}
 {"instruction": "In what language was most of the Old Testament given?","context": "","response": "Hebrew"}
 {"instruction": "In what language was most of the New Testament given?","context": "","response": "Greek"}
 {"instruction": "Which human author wrote the most books?","context": "","response": "Paul wrote 13 books."}
