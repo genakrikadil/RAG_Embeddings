@@ -20,20 +20,23 @@ It worked quite good in my opinion and can be used as "foundation" for another "
 
    **Enter your question (type 'exit' or 'quit' to stop): Why Moses crossed Red Sea?** 
 
+   _# this text will be passed to Ollama to provide the answer_
+
    **Ollama prompt will be:**
-   Based on the user's input, please provide a precise answer by referencing the most similar records found in the database.
+   _Based on the user's input, please provide a precise answer by referencing the most similar records found in the database._
 
    **User Input: Why Moses crossed Red Sea? You must select the highest Similarity Score to response. Do not mention Response ID and Similarity Score in your response.**
 
-   Top 5 Most Similar Records:
+   _Top 5 Most Similar Records:_
    1. Record ID: 4549 | Instruction: How did Moses command the Red Sea to divide so the Israelites could cross over? | Response: He lifted up his rod and stretched his hand over the sea (Exo 14:16,21) | Similarity Score: 0.8416
    2. Record ID: 3961 | Instruction: When the Egyptians tried to follow the Israelites through the Red Sea, what happened? | Response: The water crashed on them and killed them all. | Similarity Score: 0.6800
    3. Record ID: 4353 | Instruction: When Jesus walked on water, which sea was it? | Response: Sea of Galilee (John 6:1-19) | Similarity Score: 0.6646
    4. Record ID: 4223 | Instruction: Which sea did the Israelites cross through to escape the Egyptians? | Response: Red Sea (Exo 13:18) | Similarity Score: 0.6484
    5. Record ID: 4424 | Instruction: Who spotted Moses in the Nile placed in an ark of bulrushes? | Response: Pharaoh’s daughter (Exo 2:5) | Similarity Score: 0.6443
 
-   Please use the information above to generate a clear, accurate and direct response for the user based on the input provided. Do not repeat anything in this prompt.
+   _Please use the information above to generate a clear, accurate and direct response for the user based on the input provided. Do not repeat anything in this prompt._
 
+ _# the end of text to Ollama_
 
    **Response from Llama:**
 
