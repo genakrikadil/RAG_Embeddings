@@ -1,19 +1,25 @@
 import requests
 import json
-from use_embeddings import generate_prompt
 import logging
+# select if we want to use embeddings or FAISS
+# FAISS is faster and uses indexing, "use_embeddings" 
+# just loads database into the memory and searches for the closest embeddings
+# using cosine similarity between the embeddings in Database and the input
+
+#from use_embeddings import generate_prompt
+from use_FAISS import generate_prompt
+
 
 # Suppress console logging
 logging.getLogger().setLevel(logging.CRITICAL + 1)  # Set to a level above CRITICAL
 
 
-# Function to interact with the Ollama API
 def ask_llama(input_text):
     prompt = generate_prompt(input_text)
 
     # Debugging
     print("Ollama prompt will be:\n", prompt)
-    print("Asking llama...\n\n")
+    print("\n\n\n * * * Asking llama... * * * \n\n")
 
     # API request details
     url = "http://127.0.0.1:11434/api/generate"
@@ -26,15 +32,23 @@ def ask_llama(input_text):
         "stream": False
     }
 
-    # Make API call
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-
-    if response.status_code == 200:
-        response_text = response.text
-        data = json.loads(response_text)
-        return data.get("response", "No response received.")
-    else:
-        return f"Error: {response.status_code}, {response.text}"
+    try:
+        # Make API call
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+        
+        # Check for a successful response
+        if response.status_code == 200:
+            response_text = response.text
+            data = json.loads(response_text)
+            return data.get("response", "No response received.")
+        else:
+            return f"Error: {response.status_code}, {response.text}"
+    except requests.exceptions.ConnectionError:
+        # Handle server not running or connection issues
+        return "Error: Unable to connect to the Ollama server. Please ensure it is running."
+    except Exception as e:
+        # Catch other unexpected exceptions
+        return f"An unexpected error occurred: {str(e)}"
 
 # Main execution block##########################################
 if __name__ == "__main__":

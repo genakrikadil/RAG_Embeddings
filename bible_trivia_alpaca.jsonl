@@ -2,7 +2,7 @@
 {"instruction": "What is the first book in the Bible?","context": "","response": "Genesis"}
 {"instruction": "What is the last book in the Bible?","context": "","response": "Revelation"}
 {"instruction": "What four books tell about Jesus life on Earth?","context": "","response": "Matthew, Mark, Luke, John"}
-{"instruction": "Which book did Jesus directly write?","context": "","response": "None"}
+{"instruction": "Which book did Jesus directly write?","context": "","response": "Jesus wrote none books"}
 {"instruction": "What is the longest book in the Bible?","context": "","response": "Psalms"}
 {"instruction": "What is the shortest book in the Bible?","context": "","response": "3 John"}
 {"instruction": "How many books are in the Bible?","context": "","response": "66"}
@@ -1288,3 +1288,5 @@
 {"instruction": "In Luke’s account of the Sermon on the Mount to who does Jesus say “God is kind”?","context": "","response": "The unthankful and the evil (Luke 6:35)"}
 {"instruction": "How many cities did the Levites possess?","context": "","response": "Forty-eight (Josh 21:41)"}
 {"instruction": "The angel said to Mary that Jesus would “reign over the house” of which Old Testament character?","context": "","response": "Jacob (Luke 1:33)"}
+{"instruction": "Who wrote bible?","context": "","response": "Moses,Paul,Solomon and others"}
+{"instruction": "How many books Moses wrote?", "context": "", "response": "Moses is traditionally credited with writing the first five books of the Bible, collectively known as the Pentateuch or the Torah. These books are: Genesis, Exodus, Leviticus, Numbers, Deuteronomy. These books form the foundation of Jewish and Christian scriptures and contain the laws, history, and teachings attributed to Moses."}

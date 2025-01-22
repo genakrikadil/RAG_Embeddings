@@ -65,7 +65,7 @@ def generate_prompt(input_text):
     top_similarities = get_top_similar(input_text)
     prompt = (
         f"Based on the user's input, please provide a precise answer by referencing the most similar records found in the database.\n\n"
-        f"User Input: {input_text}\n\n"
+        f"User Input: {input_text} You must select the highest Similarity Score to response. Do not mention Response ID and Similarity Score in your response.\n\n"
         f"Top 5 Most Similar Records:\n"
     )
     for idx, record in enumerate(top_similarities, 1):
@@ -73,7 +73,7 @@ def generate_prompt(input_text):
         prompt += f"{idx}. Record ID: {db_id} | Instruction: {instruction} | Response: {response} | Similarity Score: {sim:.4f}\n"
     prompt += (
         "\nPlease use the information above to generate a clear, accurate and direct response for the user based on the input provided. "
-        "Do not repeat anything in this prompt."
+        "Do not repeat anything in this prompt. Use the highest Similarity Score to guide your response."
     )
     return prompt
 

@@ -7,12 +7,27 @@ import sqlite3
 from sentence_transformers import SentenceTransformer
 import numpy as np
 import json
+from use_FAISS import build_and_save_faiss_index
 
 
 # Load the model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
+# Clear all records from the database
+def clear_database(db_path):
+    try:
+        conn = sqlite3.connect(db_path)
+        cur = conn.cursor()
 
+        # Delete all records from the table
+        cur.execute("DELETE FROM resume_embeddings;")
+        conn.commit()
+        print("All records cleared from the database.")
+
+        cur.close()
+        conn.close()
+    except Exception as e:
+        print("Error clearing the database:", e)
 
 # Initialize SQLite database
 def initialize_database(db_path):
@@ -93,7 +108,10 @@ if __name__ == "__main__":
     # Step 1: Initialize SQLite database
     initialize_database(db_path)
 
-    # Step 2: Load and process JSON data
+    # Step 2: Clear existing records
+    clear_database(db_path)
+
+    # Step 3: Load and process JSON data
     with open(json_file_path, 'r') as f:
         data = [json.loads(line.strip()) for line in f.readlines()]
 
@@ -103,14 +121,17 @@ if __name__ == "__main__":
 
     print(f"Loaded {len(instructions)} entries from the JSON file.")
 
-    # Step 3: Convert to vectors (only use instruction and response for embeddings)
+    # Step 4: Convert to vectors (only use instruction and response for embeddings)
     texts_to_embed = instructions + responses  # Combining instruction and response
     embeddings = model.encode(texts_to_embed)
 
-    # Step 4: Insert data into the database
+    # Step 5: Insert data into the database
     insert_embeddings(db_path, instructions, contexts, responses, embeddings)
 
-    # Optional: Fetch and display embeddings
+    # Optional 6: Fetch and display embeddings
     fetched_data = fetch_embeddings(db_path)
     for instruction, context, response, embedding in fetched_data[:5]:  # Show only the first 5 for brevity
         print(f"Instruction: {instruction}\nContext: {context}\nResponse: {response}\nEmbedding: {embedding[:10]}... (truncated)\n")
+
+    #Step 7 build FAISS index
+    build_and_save_faiss_index()    
