@@ -16,14 +16,14 @@ The idea is to create a foundation for an "expert system" by providing Q&A pairs
 It worked quite good in my opinion and can be used as "foundation" for another "AI Powered Expert System" project such as my "wendy-bot" project which you can find here: https://github.com/genakrikadil/wendy_addams_bot
 
 
-This is an example how it works:
+# This is an example how it works:
 
-# Enter your question (type 'exit' or 'quit' to stop): Why Moses crossed Red Sea?
+   **Enter your question (type 'exit' or 'quit' to stop): Why Moses crossed Red Sea?** 
 
-   Ollama prompt will be:
+   **Ollama prompt will be:**
    Based on the user's input, please provide a precise answer by referencing the most similar records found in the database.
 
-   User Input: Why Moses crossed Red Sea? You must select the highest Similarity Score to response. Do not mention Response ID and Similarity Score in your response.
+   **User Input: Why Moses crossed Red Sea? You must select the highest Similarity Score to response. Do not mention Response ID and Similarity Score in your response.**
 
    Top 5 Most Similar Records:
    1. Record ID: 4549 | Instruction: How did Moses command the Red Sea to divide so the Israelites could cross over? | Response: He lifted up his rod and stretched his hand over the sea (Exo 14:16,21) | Similarity Score: 0.8416
@@ -35,12 +35,7 @@ This is an example how it works:
    Please use the information above to generate a clear, accurate and direct response for the user based on the input provided. Do not repeat anything in this prompt.
 
 
-
-   * * * Asking llama... * * * 
-
-
-
-   Response from Llama:
+   **Response from Llama:**
 
    Moses crossed the Red Sea to allow the Israelites to escape from the pursuing Egyptians. The sea miraculously parted, allowing the Israelites to cross safely, while the pursuing forces of Egypt were destroyed by the returning waters.
 
