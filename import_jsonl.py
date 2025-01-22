@@ -25,6 +25,7 @@ def initialize_database(db_path):
         CREATE TABLE IF NOT EXISTS resume_embeddings (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             instruction TEXT,
+            context TEXT,
             response TEXT,
             embedding BLOB
         );

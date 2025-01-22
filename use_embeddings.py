@@ -41,7 +41,7 @@ def get_all_embeddings():
 
 # Function to compute similarity between input and stored embeddings
 def get_top_similar(input_text, top_n=5):
-    logger.info(f"USER INPUT: {input_text}")
+    #logger.info(f"USER INPUT: {input_text}")
     input_embedding = model.encode([input_text])[0]
     all_similarities = []
 
