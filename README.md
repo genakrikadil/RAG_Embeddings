@@ -37,7 +37,7 @@ It worked quite good in my opinion and can be used as "foundation" for another "
 
    **Response from Llama:**
 
-   Moses crossed the Red Sea to allow the Israelites to escape from the pursuing Egyptians. The sea miraculously parted, allowing the Israelites to cross safely, while the pursuing forces of Egypt were destroyed by the returning waters.
+   **Moses crossed the Red Sea to allow the Israelites to escape from the pursuing Egyptians. The sea miraculously parted, allowing the Israelites to cross safely, while the pursuing forces of Egypt were destroyed by the returning waters.**
 
 ---
 
