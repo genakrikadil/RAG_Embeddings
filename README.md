@@ -15,6 +15,9 @@ The idea is to create a foundation for an "expert system" by providing Q&A pairs
 
 It worked quite good in my opinion and can be used as "foundation" for another "AI Powered Expert System" project such as my "wendy-bot" project which you can find here: https://github.com/genakrikadil/wendy_addams_bot
 
+# Why RAG? Removing hallucinations !
+
+The LLM is a crucial part of the RAG system but has the potential to produce incorrect information, commonly referred to as hallucinations. These can take the form of fabricated facts, inaccurate details, or nonsensical language. Often, hallucinations are presented in a highly convincing manner, making them challenging to detect. However, a well-designed RAG application can more effectively mitigate hallucinations compared to relying solely on an LLM.
 
 # This is an example how it works:
 
